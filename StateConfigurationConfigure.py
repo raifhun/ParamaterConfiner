@@ -1,4 +1,4 @@
-## The config module for general_api_pull.py
+# The config module for setting the states and transitions of interest in the solver
 
 import configparser
 from collections import OrderedDict
