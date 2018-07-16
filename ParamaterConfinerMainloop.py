@@ -34,20 +34,27 @@ def build_transitions(state_set):  # builds the transition dictionary in general
     config_state = configparser.ConfigParser()
     config_state.read(state_file.name)
     initial_guess = dict(config_state['INITIAL_GUESS'])
+    transition_list = []
+    transition_initial = []
     for state in state_set:
         for second_state in state_set:
             if state != second_state:
-                transition_list.append(state + "_" + seond_state)
+                transition_list.append(state + "_" + second_state)
 
     for transition in transition_list:
-        if transition not in intitial_guess.keys()
-            transition_intitial.append(1)
+        if transition not in initial_guess.keys():
+            transition_initial.append(1)
         else:
             transition_initial.append(initial_guess[transition])
     initial_trans_dict = dict(zip(transition_list, transition_initial))
     return initial_trans_dict
 
 
+def import_experimental(transition):
+    filedialog.askopenfile(title="Select the experimental data file for " + str(transition) + "transition.",
+                           filetypes=(("csv files", "*.csv"), ("all files", "*.*")))
+    pd_read = pd.read_csv('C:/Users/Pone/Documents/RedHat Assessment/Goalies.csv', error_bad_lines=False)
+    return pd_read
 
 # Varies the specified parameter by the input percentage and checks the output with the experimental data
 
@@ -55,8 +62,10 @@ def build_transitions(state_set):  # builds the transition dictionary in general
 
 
 def main_loop():
-    print(build_states())
+    state_friends = build_states()
+    print(state_friends)
     print(transitions_interested())
+    print(build_transitions(state_friends))
 
 
 main_loop()

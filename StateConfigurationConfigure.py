@@ -11,14 +11,14 @@ config = configparser.ConfigParser()
 
 config['STATES'] = {
 
-    'N1': '4I15/2',
-    'N2': '4I13/2',
-    'N3': '4I11/2',
-    'N4': '4I9/2',
-    'N5': '4F9/2',
-    'N6': '4S3/2',
-    'N7': '2H11/2',
-    'N8': '4F7/2',
+    'Er1': '4I15/2',
+    'Er2': '4I13/2',
+    'Er3': '4I11/2',
+    'Er4': '4I9/2',
+    'Er5': '4F9/2',
+    'Er6': '4S3/2',
+    'Er7': '2H11/2',
+    'Er8': '4F7/2',
     'Yb1': '2F7/2',
     'Yb2': '2F5/2'
 }
@@ -26,10 +26,15 @@ config['STATES'] = {
 
 config['TRANSITIONS'] = {
 
-    'N5_1': 'Red',
-    'N6_1': 'S',
-    'N7_1': 'H',
+    'Er5_Er1': 'Red',
+    'Er6_Er1': 'S',
+    'Er7_Er1': 'H',
 
+}
+
+config['INITIAL_GUESS'] = {
+    'Er5_Er1': 0.5,
+    'Er3_Er8': 0.3
 }
 
 
