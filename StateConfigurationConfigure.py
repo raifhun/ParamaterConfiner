@@ -32,9 +32,23 @@ config['TRANSITIONS'] = {
 
 }
 
-config['INITIAL_GUESS'] = {
-    'Er5_Er1': 0.5,
-    'Er3_Er8': 0.3
+config['INITIAL_TRANSITION'] = {
+    'Er1_Er5': 3,
+    'Er1_Er4': 1.5,
+    'Er5_Yb2': 50,
+    'Er4_Yb2': 50,
+    'Er4_Er5': 2.5,
+    'Er3_Er8': 6
+}
+
+config['INITIAL_STATE'] = {
+    'Er1': 1000,
+    'Er2': 300,
+    'Er3': 150,
+    'Er4': 200,
+    'Er7': 500,
+    'Er5': 12000,
+    'Yb2': 20000
 }
 
 
